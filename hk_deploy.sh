@@ -1,6 +1,6 @@
 #!/bin/bash
-repo_url=$REPO_URL
-repo_branch=$REPO_BRANCH
+repo_url="https://github.com/uk365/FZBypassBot"
+repo_branch='main'
 
 if [ -z "$repo_url" ] || [ -z "$repo_branch" ]; then
   echo "REPO_URL or REPO_BRANCH environment variable is not set. Exiting ..."
@@ -20,15 +20,10 @@ git reset --hard origin/$repo_branch -q
 
 pip install -r requirements.txt --quiet
 
-start_cmd=$START_CMD
-if [ -z "$start_cmd" ]; then
+if [ -z "bash start.sh" ]; then
   echo "START_CMD not specified. Exiting Now ..."
   exit 1
 fi
 
-echo "
-█░█ █▄▀ ▄▄ █░░ █▀█ ▄▀█ █▀▄ █▀▀ █▀█
-█▀█ █░█ ░░ █▄▄ █▄█ █▀█ █▄▀ ██▄ █▀▄
-                                 v1.0.0
-Repo : https://github.com/SilentDemonSD/HK-Loader By SilentDemonSD"
+echo "MrTamilKiK"
 eval "$start_cmd"
