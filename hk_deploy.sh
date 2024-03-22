@@ -24,7 +24,7 @@ git reset --hard origin/$repo_branch -q
 
 pip install -r requirements.txt --quiet
 
-start_cmd=$START_CMD
+start_cmd="bash start.sh"
 if [ -z "$start_cmd" ]; then
   echo "START_CMD not specified. Exiting Now ..."
   exit 1
